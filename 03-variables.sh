@@ -1,6 +1,6 @@
 #!bin/bash
-X1:Adwik
-X2:Yeshwanth
+X1=Adwik
+X2=Yeshwanth
 
 echo "$X1:: Hi ${X2}, How r u?"
 echo "${X2}:: Hello $X1, I am fine, How about u?"
