@@ -18,6 +18,10 @@ then
     if [ $? -ne 0 ]
     then
         echo "Git installation not success"
+        exit 1
+    else
+        echo "Git installtion is success"
+    fi    
 else
     echo "Git is already installed, no-installion pending"
 fi
