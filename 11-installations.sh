@@ -26,12 +26,12 @@ else
     echo "Git is already installed, no-installion pending"
 fi
 
-dnf install MySQL -y
+dnf list installed mysql -y
 
 if [ $? -ne 0 ]
 then
     echo "MySQL is not installed, going to install"
-    dnf install MySQL -y
+    dnf install mysql -y
 
     if [ $? -ne o ]
     then
