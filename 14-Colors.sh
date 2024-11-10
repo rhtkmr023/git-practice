@@ -6,7 +6,7 @@ USERID=$(id -u)
 CHECK_ROOT(){
     if [ $USERID -ne 0 ]
     then
-        echo -e "\e[36m Please run this script with root privileges"
+        echo -e "\e[35m Please run this script with root privileges"
         exit 1
     fi
 }
@@ -17,7 +17,7 @@ VALIDATE(){
         echo  -e "\e[31m $2 is.. FAILED"
         exit 1
     else
-        echo  -e "\e[32m $2 is..SUCCESS"
+        echo  -e "\e[33m $2 is..SUCCESS"
     fi
 }
 
@@ -33,7 +33,7 @@ then
     dnf install git -y
     VALIDATE $? "Installing GIT" 
 else
-    echo -e "\e[34m Git is already installed, no-installion pending"
+    echo -e "\e[35m Git is already installed, no-installion pending"
 fi
 
 dnf list installed mysql -y
@@ -45,5 +45,5 @@ then
 
     VALIDATE $? "Installing MySQL"
 else
-    echo -e "\e[34m MySQL is already installed"
+    echo -e "\e[35m MySQL is already installed"
 fi
