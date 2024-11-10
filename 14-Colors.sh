@@ -29,11 +29,11 @@ VALIDATE $? "Listing Git"
 
 if [ $? -ne 0 ]
 then
-    echo -e "\e[34m Git is not installed. Going to install"
+    echo -e "\e[33m Git is not installed. Going to install"
     dnf install git -y
     VALIDATE $? "Installing GIT" 
 else
-    echo -e "\e[33m Git is already installed, no-installion pending"
+    echo -e "\e[34m Git is already installed, no-installion pending"
 fi
 
 dnf list installed mysql -y
@@ -45,5 +45,5 @@ then
 
     VALIDATE $? "Installing MySQL"
 else
-    echo -e "\e[36m MySQL is already installed"
+    echo -e "\e[34m MySQL is already installed"
 fi
