@@ -47,10 +47,9 @@ fi
 for package in $@  # $@ is a special varibale where all arguments are passed to it.
 do
     dnf list installed $package $LOG_FILE
-
-    if [$? -ne 0]
+    if [ $? -ne 0 ]
     then
-        echo " $package is not installed" &>>$LOG_FILE
+        echo " $package is not installed, going to install it.." &>>$LOG_FILE
         dnf install $package -y &>>$LOG_FILE
         VALIDATE $? "installing $package"
     else
