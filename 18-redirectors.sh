@@ -6,8 +6,7 @@ TIMESTAMP=$(date +%y-%m-%d-%H-%M-%S)
 LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME-$TIMESTAMP.log"
 mkdir -p $LOGS_FOLDER
 
-USERID=$(id -u)
-#echo "User ID is: $USERID"
+USERID=$(id -u) #echo "User ID is: $USERID"
 R="\e[31m"
 G="\e[32m"
 N="\e[0m"
@@ -34,8 +33,9 @@ VALIDATE(){
 USAGE(){
     echo -e "$R USAGE:: $N sudo sh-18-redirectos.sh package1 package2 ..."
     exit 1
-
 }
+
+echo "Script started executing at: $date" 
 
 CHECK_ROOT
 
