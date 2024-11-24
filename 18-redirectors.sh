@@ -31,7 +31,7 @@ VALIDATE(){
 }
 
 USAGE(){
-    echo -e "$R USAGE:: $N sudo sh 18-redirectos.sh package1 package2 ..."
+    echo -e "$R USAGE:: $N sudo sh 18-redirectors.sh package1 package2 ..."
     exit 1
 }
 
